@@ -9,14 +9,26 @@ color: #b771f0;
 
 p {
 color: #262352;
+font-family: 'Times New Roman';
+generic-family: 'fantasy'
 }
 
 body{
 padding-left: 15px;
+background-color: #c3e3d1;
 }
 
 .TXT {
-color: #fcc52d;
+color: #72d69b;
+}
+
+.p1h {
+color: #08823b;
+}
+
+.Ateez {
+color: #3f1085;
+font-family: 'Lobster'
 }
 
 .header {

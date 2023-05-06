@@ -1,0 +1,58 @@
+{% load static %}
+<html>
+<head> <title> fesiroo </title>
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Lobster&subset=latin,cyrillic" rel="stylesheet" type="text/css">
+    <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
+<link rel="stylesheet" href="{% static 'css/blog.css' %}"></head>
+<body>
+
+<div class="header"> <h1> <a href = "/"> fesiroo Blog </a> </h1></div>
+
+<h1 class="TXT"> TXT </h1>
+<h2 class="p1h"> P1Harmony </h2>
+<h3 class="Ateez"> Ateez </h3>
+<ul class="list">
+    <li> TXT </li>
+    <li> P1Harmony </li>
+    <li> Ateez </li>
+</ul>
+
+<div class="content container">
+    <div class="row">
+        <div class="col-md-8">
+            {% block content %}
+                <div class="post">
+                    <div class="date">
+                        <p>Опубликовано: {{ post.published_date }}</p>
+                    </div>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endblock %}
+        </div>
+    </div>
+</div>
+</body>
+<div> <p> 22.04.23 </p>
+<h2> <a href = "/"> my first post</a></h2>
+<p> Hi i'm fesiroo! </p>
+</div>
+
+<div> <p> 12:21</p>
+    <h2> <a href = "/">  Ateez </a> </h2>
+<p> 8 makes 1 team </p></div>
+
+<div>
+    <p> saturday </p>
+    <h2> <a href = "/"> TXT </a></h2>
+    <p> One Dream </p>
+</div>
+
+<div> <p> 2023 year </p>
+<h2> <a href = "/"> P1Harmony </a></h2>
+<p> Plus Everything </p>
+</div>
+
+</html>
